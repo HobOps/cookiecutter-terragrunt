@@ -1,0 +1,14 @@
+{
+    "organizations_base_dirname": "organizations",
+    "organization_dirname": "example.com",
+    "terraform_project": "example-project-1234",
+    "terraform_bucket_name": "{{cookiecutter.terraform_project}}-tfstate",
+    "terraform_bucket_region": "US",
+    "terraform_backend_prefix": "terragrunt",
+    "terraform_backend_region": "us-central1",
+    "terraform_project_billing_account": "000000-000000-000000",
+    "terraform_kms_keyring": "terraform",
+    "terraform_kms_key": "sops-key",
+    "org_id": "000000000000",
+    "org_ssh_keys": ""
+}

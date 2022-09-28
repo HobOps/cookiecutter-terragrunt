@@ -1,0 +1,7 @@
+creation_rules:
+- path_regex: (.*)\.secrets\.yaml
+  gcp_kms: projects/{{cookiecutter.terraform_project}}/locations/global/keyRings/{{cookiecutter.terraform_kms_keyring}}/cryptoKeys/{{cookiecutter.terraform_kms_key}}
+- path_regex: encryption_key\.txt
+  gcp_kms: projects/{{cookiecutter.terraform_project}}/locations/global/keyRings/{{cookiecutter.terraform_kms_keyring}}/cryptoKeys/{{cookiecutter.terraform_kms_key}}
+- path_regex: /dev/stdin
+  gcp_kms: projects/{{cookiecutter.terraform_project}}/locations/global/keyRings/{{cookiecutter.terraform_kms_keyring}}/cryptoKeys/{{cookiecutter.terraform_kms_key}}
