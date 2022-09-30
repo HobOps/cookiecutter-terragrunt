@@ -7,7 +7,7 @@ Execute the following commands on the correct directory
 ## vpc
 ### network
 ```
-terragrunt import 'module.vpc["{{cookiecutter.vpc_name}}"].module.vpc.google_compute_network.network' /projects/{{cookiecutter.project_id}}/global/networks/{{cookiecutter.vpc_name}}```
+terragrunt import 'module.vpc["{{cookiecutter.vpc_name}}"].module.vpc.google_compute_network.network' /projects/{{cookiecutter.project_id}}/global/networks/{{cookiecutter.vpc_name}}
 ```
 ### subnets
 ```
