@@ -9,6 +9,7 @@ We need to create the following resources using gcloud:
 ```bash
 export ORG_BASE_DIRNAME="{{cookiecutter.organizations_base_dirname}}"
 export ORG_DIRNAME="{{cookiecutter.organization_dirname}}"
+export ORG_ID="{{cookiecutter.org_id}}"
 export PROJECT_ID="{{cookiecutter.terraform_project}}"
 export BILLING_ACCOUNT="{{cookiecutter.terraform_project_billing_account}}"
 export BUCKET_NAME="{{cookiecutter.terraform_bucket_name}}"
@@ -24,7 +25,7 @@ cd ${ORG_BASE_DIRNAME}/${ORG_DIRNAME}
 
 - Create the initial project and set billing account
 ```bash
-gcloud projects create ${PROJECT_ID}
+gcloud projects create ${PROJECT_ID} --organization=${ORG_ID}
 gcloud beta billing projects link ${PROJECT_ID} --billing-account=${BILLING_ACCOUNT}
 ```
 
