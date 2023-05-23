@@ -26,6 +26,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   cloud_nat_routers = {
     "router-${local.region}" = {

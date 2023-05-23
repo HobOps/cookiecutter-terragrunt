@@ -11,7 +11,7 @@ include "provider_gcp_organization" {
 
 # Code used by module
 terraform {
-  source = "{{cookiecutter.__terraform_module_google_factory_version}}"
+  source = read_terragrunt_config(find_in_parent_folders("_configuration/${local.current_module}.hcl")).terraform.source
 }
 
 locals {

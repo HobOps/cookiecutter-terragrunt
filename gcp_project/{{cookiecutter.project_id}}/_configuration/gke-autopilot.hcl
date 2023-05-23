@@ -26,6 +26,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   gke_autopilot_private = {
     "k8s-autopilot-${local.region}" = {

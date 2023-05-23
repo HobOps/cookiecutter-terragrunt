@@ -21,6 +21,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   addresses = {
     "ip-internal-loadbalancer-${local.region}" = {

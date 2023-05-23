@@ -9,7 +9,7 @@ include "provider_gcp_project" {
 }
 
 terraform {
-  source = "{{cookiecutter.__terraform_module_resources_version}}"
+  source = read_terragrunt_config(find_in_parent_folders("_configuration/${local.current_module}.hcl")).terraform.source
 }
 
 locals {

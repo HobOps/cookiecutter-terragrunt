@@ -1,3 +1,7 @@
+terraform {
+  source = "{{cookiecutter.__terraform_module_google_factory_version}}"
+}
+
 inputs = {
   project_id              = "{{cookiecutter.project_id}}"
   tfstate_prefix          = "{{cookiecutter.tfstate_prefix}}"

@@ -21,6 +21,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   gcs_buckets = {
     "${local.client}-example-bucket" = {

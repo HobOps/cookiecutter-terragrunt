@@ -17,6 +17,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   vpc = {
     {{cookiecutter.vpc_name}} = {

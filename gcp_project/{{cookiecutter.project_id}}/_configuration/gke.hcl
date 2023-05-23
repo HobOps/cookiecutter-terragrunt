@@ -26,6 +26,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   gke = {
     "k8s-${local.region}" = {

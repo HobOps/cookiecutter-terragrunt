@@ -17,6 +17,10 @@ locals {
   # Module variables
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   service_accounts = {
     "{{cookiecutter.service_account_name}}" = {

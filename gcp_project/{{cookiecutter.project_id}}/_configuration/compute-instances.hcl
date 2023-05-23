@@ -37,6 +37,10 @@ locals {
   }
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   compute_instances = {
     "example-instance-${local.region}" = {

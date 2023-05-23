@@ -22,6 +22,10 @@ locals {
   secrets = yamldecode(sops_decrypt_file(find_in_parent_folders("_configuration/cloud-sql.secrets.yaml")))
 }
 
+terraform {
+  source = "{{cookiecutter.__terraform_module_resources_version}}"
+}
+
 inputs = {
   cloud_sql_postgresql = {
     "${local.client}-postgres-common" = {
